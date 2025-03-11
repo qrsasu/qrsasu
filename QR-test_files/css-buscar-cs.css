@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Tipografía del cuerpo y deslizador de la página */
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Encabezado de la página, su logo y sus botones */
+#main-Header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 300px;
+}
+
+#main-Header .logo img {
+    width: 150px;
+}
+
+#main-Header .nav-btn {
+    background: none;
+    border: none;
+    color: #0badc7;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 20px;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.3s ease; 
+}
+
+#main-Header .nav-btn:hover {
+    color: #07e0f2;           
+    transform: scale(1.05);    
+}
+
+
+#confirmacionModal {
+    display: none;
+    position: fixed; /* Posición fija en la pantalla */
+    left: 0;
+    top: 0;
+    width: 100%; /* Anchura completa */
+    height: 100%; /* Altura completa */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+#confirmacionModalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Ancho fijo para el contenido del modal */
+}
+
+#confirmacionModal button {
+    background-color: #007bff; /* Color de Bootstrap primary */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#confirmacionModal button:hover {
+    background-color: #0056b3;
+}
+
+
+#tabla-datos-de-obtencion-agil-y-oportuna-para-agilizar-el-desarrollo-social-y-ciudadanos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-datos-de-obtencion-agil-y-oportuna-para-agilizar-el-desarrollo-social-y-ciudadanos th, #tabla-datos-de-obtencion-agil-y-oportuna-para-agilizar-el-desarrollo-social-y-ciudadanos td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center; /* Centrar contenido en la tabla */
+    vertical-align: middle; /* Alinear verticalmente */
+    height: 65px;
+}
+
+#tabla-datos-de-obtencion-agil-y-oportuna-para-agilizar-el-desarrollo-social-y-ciudadanos th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el botón 'Guardar' */
+.boton-guardar {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-guardar:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el botón 'Actualizar datos-de-obtencion-agil-y-oportuna-para-agilizar-el-desarrollo-social-y-ciudadanos' */
+.boton-actualizar {
+    padding: 5px 15px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 100px;
+}
+
+.boton-actualizar:hover {
+    background-color: #007B9A;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 2.0rem; /* espacio para nuestro "checkbox", usa rem para un tamaño relativo */
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Estilo por defecto para el pseudo-checkbox */
+input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem; /* Usa rem para tamaños relativos */
+    height: 2rem;
+    border: 2px solid #ccc;
+    background-color: red; /* Color rojo para el estado no marcado */
+    border-radius: 0.3rem;
+}
+
+/* Estilo cuando el checkbox está marcado */
+input[type="checkbox"]:checked + label:before {
+    background-color: green; /* Color verde para el estado marcado */
+}
+
+/* Estilo cuando el checkbox está marcado y deshabilitado */
+input[type="checkbox"]:checked:disabled + label:before {
+    background-color: rgba(0, 128, 0, 0.25); /* Color verde para el estado marcado */
+}
+
+/* Estilo cuando el checkbox está marcado y deshabilitado */
+input[type="checkbox"]:disabled + label:before {
+    background-color: rgba(255, 0, 0, 0.25); /* Color rojo para el estado no marcado */
+}
+
+
+#filtro {
+    margin-bottom: 10px;
+}
+
+#filtro input[type="text"] {
+    padding: 5px;
+    width: 200px; /* O el tamaño que prefieras */
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.encabezados-detalle {
+    font-weight: bold;
+    background-color: #f2f2f2; /* color de fondo para diferenciar los encabezados */
+}
+
+.hidden {
+    display: none; /* Esto es para ocultar las filas de detalles cuando no estén expandidas */
+}
+
+
+.logo-container {
+    display: flex; /* Establecemos flexbox para el contenedor */
+    align-items: center; /* Alineamos los ítems al centro verticalmente */
+    justify-content: flex-start; /* Alineamos los ítems al inicio horizontalmente */
+}
+.sniper-tech-container {
+    display: flex; /* Habilita flexbox para este contenedor también */
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center; /* Centra los ítems horizontalmente */
+    margin-left: 10px; /* Añade margen izquierdo */
+}
+.desarrollado-por {
+    order: -1; /* Coloca este elemento encima de su hermano en flexbox */
+    margin-bottom: 4px; /* Margen entre el texto y el logo */
+    font-size: 10px
+}
+.logo-sniper {
+    order: 1; /* Este será el segundo elemento, debajo del texto */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    font-size: 8px;
+    display: none;
+}
